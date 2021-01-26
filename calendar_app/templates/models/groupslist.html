@@ -1,0 +1,22 @@
+<div class="modal fade" id="groupslist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #EB7E4D; color: #fff;">
+          <h5 class="modal-title" id="exampleModalLabel">Join a group </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <form action="{% url 'join-group' %}" method="post">
+             {% csrf_token %}
+             <input type="text" name="grpcode" placeholder="Enter group code " class="form-control form-group">
+
+             <div class="modal-footer">
+               <button type="submit" class="btn btn-primary">Join group</button>
+             </div>
+         </form>
+        </div>
+      </div>
+    </div>
+  </div>
